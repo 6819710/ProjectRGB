@@ -4,28 +4,44 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    private float inputDirection;
+    private float inputDirection; // X Move
+    private float verticalVelocity; // Y Move
     private CharacterController controller;
     private Vector3 moveVector;
 
-    public bool debug;
+    // Speeds and Feeds
+    public float gravity;
+    public float speed;
+    public float jump;
+
+    // Flags
+    public bool move_while_jump;
+
 
     // Start is called before the first frame update
     void Start()
     {
         controller = GetComponent<CharacterController>();
-
     }
 
     // Update is called once per frame
     void Update()
     {
-        inputDirection = Input.GetAxis("Horizontal");
-        if(debug)
-               Debug.Log(inputDirection);
+        if (move_while_jump)
+            inputDirection = Input.GetAxis("Horizontal") * speed;
+        if (controller.isGrounded)
+        {
+            verticalVelocity = 0;
+            inputDirection = Input.GetAxis("Horizontal") * speed;
+            if (Input.GetAxis("Jump") != 0.0f)
+                verticalVelocity = jump;
+        }
+        else
+            verticalVelocity -= gravity;
+            
 
-        moveVector = new Vector3(inputDirection / 10, 0, 0);
+        moveVector = new Vector3(inputDirection, verticalVelocity, 0);
 
-        controller.Move(moveVector);
+        controller.Move(moveVector * Time.deltaTime);
     }
 }
