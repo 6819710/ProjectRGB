@@ -5,7 +5,8 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     private float inputDirection; // X Move
-    private float verticalVelocity; // Y Move
+    public float verticalVelocity; // Y Move
+
     private CharacterController controller;
     private Vector3 moveVector;
 
@@ -38,10 +39,24 @@ public class PlayerMovement : MonoBehaviour
         }
         else
             verticalVelocity -= gravity;
-            
+
 
         moveVector = new Vector3(inputDirection, verticalVelocity, 0);
 
         controller.Move(moveVector * Time.deltaTime);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        switch (other.tag)
+        {
+            case "ClimbTrigger":
+                if (verticalVelocity > 0)
+                {
+                    verticalVelocity = jump;
+                    moveVector = new Vector3(inputDirection, verticalVelocity, 0);
+                }
+                break;
+        }
     }
 }

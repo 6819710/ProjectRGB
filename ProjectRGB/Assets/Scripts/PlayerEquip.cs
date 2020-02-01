@@ -84,15 +84,19 @@ public class PlayerEquip : MonoBehaviour
         {
             case "RedGoggles":
                 has_red = true;
+                other.gameObject.GetComponent<Renderer>().enabled = false;
+                other.gameObject.GetComponent<BoxCollider>().enabled = false;
                 break;
             case "GreenGoggles":
                 has_green = true;
+                other.gameObject.GetComponent<Renderer>().enabled = false;
+                other.gameObject.GetComponent<BoxCollider>().enabled = false;
                 break;
             case "BlueGoggles":
                 has_blue = true;
+                other.gameObject.GetComponent<Renderer>().enabled = false;
+                other.gameObject.GetComponent<BoxCollider>().enabled = false;
                 break;
         }
-        other.gameObject.GetComponent<Renderer>().enabled = false;
-        other.gameObject.GetComponent<BoxCollider>().enabled = false;
     }
 }
