@@ -5,10 +5,12 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     private float inputDirection; // X Move
-    public float verticalVelocity; // Y Move
+    private float verticalVelocity; // Y Move
 
     private CharacterController controller;
     private Vector3 moveVector;
+
+    private Animator anim;
 
     // Speeds and Feeds
     public float gravity;
@@ -16,24 +18,26 @@ public class PlayerMovement : MonoBehaviour
     public float jump;
 
     // Flags
-    public bool move_while_jump;
+    public bool moveWhileJump;
 
+    private bool isLeft;
 
     // Start is called before the first frame update
     void Start()
     {
         controller = GetComponent<CharacterController>();
+        anim = GetComponent<Animator>();
+        isLeft = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (move_while_jump)
-            inputDirection = Input.GetAxis("Horizontal") * speed;
+        UpdateDirection();
+
         if (controller.isGrounded)
         {
             verticalVelocity = 0;
-            inputDirection = Input.GetAxis("Horizontal") * speed;
             if (Input.GetAxis("Jump") != 0.0f)
                 verticalVelocity = jump;
         }
@@ -44,6 +48,28 @@ public class PlayerMovement : MonoBehaviour
         moveVector = new Vector3(inputDirection, verticalVelocity, 0);
 
         controller.Move(moveVector * Time.deltaTime);
+    }
+
+    void UpdateDirection()
+    {
+        if(moveWhileJump || controller.isGrounded)
+        {
+            inputDirection = Input.GetAxis("Horizontal") * speed;
+            if (inputDirection < 0.0f && !isLeft)
+            {
+                Debug.Log("Turn Left");
+                anim.SetTrigger("TurnL");
+                anim.ResetTrigger("TurnR");
+                isLeft = true;
+            }
+            if (inputDirection > 0.0f && isLeft)
+            {
+                Debug.Log("Turn Right");
+                anim.SetTrigger("TurnR");
+                anim.ResetTrigger("TurnL");
+                isLeft = false;
+            }
+        }
     }
 
     private void OnTriggerEnter(Collider other)
