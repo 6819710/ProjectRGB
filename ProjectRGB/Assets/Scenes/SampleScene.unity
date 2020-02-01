@@ -1219,9 +1219,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e8ad678ac4998140a5d3c3961f43db1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  has_red: 1
-  has_green: 1
-  has_blue: 1
+  has_red: 0
+  has_green: 0
+  has_blue: 0
   equip_red: 0
   equip_green: 0
   equip_blue: 0
@@ -1336,7 +1336,7 @@ GameObject:
   - component: {fileID: 1613539496}
   m_Layer: 0
   m_Name: Goggles
-  m_TagString: Untagged
+  m_TagString: GreenGoggles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

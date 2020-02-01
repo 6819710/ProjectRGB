@@ -77,4 +77,22 @@ public class PlayerEquip : MonoBehaviour
         if (Input.GetAxis("SetBlue") == 0.0f)
             blue_pressed = false;
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        switch(other.tag)
+        {
+            case "RedGoggles":
+                has_red = true;
+                break;
+            case "GreenGoggles":
+                has_green = true;
+                break;
+            case "BlueGoggles":
+                has_blue = true;
+                break;
+        }
+        other.gameObject.GetComponent<Renderer>().enabled = false;
+        other.gameObject.GetComponent<BoxCollider>().enabled = false;
+    }
 }
