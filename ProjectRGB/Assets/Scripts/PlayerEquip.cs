@@ -2,6 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+using UnityEngine.Audio;
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
+
 public class PlayerEquip : MonoBehaviour
 {
     public bool has_red;
@@ -15,6 +20,12 @@ public class PlayerEquip : MonoBehaviour
     public bool red_pressed;
     public bool green_pressed;
     public bool blue_pressed;
+
+    public AudioMixerSnapshot snapshot_1;
+    public AudioMixerSnapshot snapshot_2;
+    public AudioMixerSnapshot snapshot_3;
+    public AudioMixerSnapshot snapshot_4;
+
 
     // Start is called before the first frame update
     void Start()
@@ -86,16 +97,19 @@ public class PlayerEquip : MonoBehaviour
                 has_red = true;
                 other.gameObject.GetComponent<Renderer>().enabled = false;
                 other.gameObject.GetComponent<BoxCollider>().enabled = false;
+                snapshot_3.TransitionTo(0.0f);
                 break;
             case "GreenGoggles":
                 has_green = true;
                 other.gameObject.GetComponent<Renderer>().enabled = false;
                 other.gameObject.GetComponent<BoxCollider>().enabled = false;
+                snapshot_2.TransitionTo(0.0f);
                 break;
             case "BlueGoggles":
                 has_blue = true;
                 other.gameObject.GetComponent<Renderer>().enabled = false;
                 other.gameObject.GetComponent<BoxCollider>().enabled = false;
+                snapshot_4.TransitionTo(0.0f);
                 break;
         }
     }
