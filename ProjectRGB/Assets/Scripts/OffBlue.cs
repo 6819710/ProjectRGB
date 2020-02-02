@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OnBlue : MonoBehaviour
+public class OffBlue : MonoBehaviour
 {
     private GameObject player;
 
@@ -17,13 +17,13 @@ public class OnBlue : MonoBehaviour
     {
         if (player.GetComponent<PlayerEquip>().equip_blue)
         {
-            GetComponent<Renderer>().enabled = true;
-            GetComponent<BoxCollider>().enabled = true;
+            GetComponent<Renderer>().enabled = false;
+            GetComponent<BoxCollider>().enabled = false;
         }
         else
         {
-            GetComponent<Renderer>().enabled = false;
-            GetComponent<BoxCollider>().enabled = false;
+            GetComponent<Renderer>().enabled = true;
+            GetComponent<BoxCollider>().enabled = true;
         }
     }
 }

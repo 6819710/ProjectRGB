@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OnBlue : MonoBehaviour
+public class OffGreen : MonoBehaviour
 {
     private GameObject player;
 
@@ -15,15 +15,15 @@ public class OnBlue : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (player.GetComponent<PlayerEquip>().equip_blue)
-        {
-            GetComponent<Renderer>().enabled = true;
-            GetComponent<BoxCollider>().enabled = true;
-        }
-        else
+        if (player.GetComponent<PlayerEquip>().equip_green)
         {
             GetComponent<Renderer>().enabled = false;
             GetComponent<BoxCollider>().enabled = false;
+        }
+        else
+        {
+            GetComponent<Renderer>().enabled = true;
+            GetComponent<BoxCollider>().enabled = true;
         }
     }
 }
