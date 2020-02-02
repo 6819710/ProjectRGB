@@ -35,6 +35,10 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        float previousX = 0;
+        if (transform.position.z == 0)
+            previousX = transform.position.x;
+
         UpdateDirection();
 
         if (controller.isGrounded)
@@ -44,12 +48,19 @@ public class PlayerMovement : MonoBehaviour
                 verticalVelocity = jump;
         }
         else
-            verticalVelocity -= gravity;
-
+            verticalVelocity -= gravity * Time.deltaTime;
 
         moveVector = new Vector3(inputDirection, verticalVelocity, 0);
 
         controller.Move(moveVector * Time.deltaTime);
+
+        if (transform.position.z != 0)
+        {
+            Vector3 newPos = transform.position;
+            newPos.x = previousX;
+            newPos.z = 0;
+            transform.position = newPos;
+        }
     }
 
     void UpdateDirection()
