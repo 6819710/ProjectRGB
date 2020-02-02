@@ -777,8 +777,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e8ad678ac4998140a5d3c3961f43db1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  has_red: 1
-  has_green: 1
+  has_red: 0
+  has_green: 0
   has_blue: 0
   equip_red: 0
   equip_green: 0
