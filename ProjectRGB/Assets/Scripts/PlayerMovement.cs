@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 moveVector;
 
     private Animator anim;
+    private Animator bodyAnim;
 
     // Speeds and Feeds
     public float gravity;
@@ -27,6 +28,7 @@ public class PlayerMovement : MonoBehaviour
     {
         controller = GetComponent<CharacterController>();
         anim = GetComponent<Animator>();
+        bodyAnim = GameObject.Find("PlayerBody").GetComponent<Animator>();
         isLeft = false;
     }
 
@@ -52,7 +54,7 @@ public class PlayerMovement : MonoBehaviour
 
     void UpdateDirection()
     {
-        if(moveWhileJump || controller.isGrounded)
+        if (moveWhileJump || controller.isGrounded)
         {
             inputDirection = Input.GetAxis("Horizontal") * speed;
             if (inputDirection < 0.0f && !isLeft)
@@ -62,13 +64,24 @@ public class PlayerMovement : MonoBehaviour
                 anim.ResetTrigger("TurnR");
                 isLeft = true;
             }
-            if (inputDirection > 0.0f && isLeft)
+            else if (inputDirection > 0.0f && isLeft)
             {
                 Debug.Log("Turn Right");
                 anim.SetTrigger("TurnR");
                 anim.ResetTrigger("TurnL");
                 isLeft = false;
             }
+        }
+
+        if(controller.isGrounded && inputDirection != 0.0f)
+        {
+            bodyAnim.ResetTrigger("Idle");
+            bodyAnim.SetTrigger("Walk");
+        }
+        else
+        {
+            bodyAnim.ResetTrigger("Walk");
+            bodyAnim.SetTrigger("Idle");
         }
     }
 
