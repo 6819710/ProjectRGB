@@ -17,13 +17,21 @@ public class OnGreen : MonoBehaviour
     {
         if (player.GetComponent<PlayerEquip>().equip_green)
         {
-            GetComponent<Renderer>().enabled = true;
-            GetComponent<BoxCollider>().enabled = true;
+            if (GetComponent<Renderer>())
+                GetComponent<Renderer>().enabled = true;
+            
+                GetComponent<BoxCollider>().enabled = true;
+            if (GetComponent<MeshRenderer>() != null)
+                GetComponent<MeshRenderer>().enabled = true;
         }
         else
         {
-            GetComponent<Renderer>().enabled = false;
-            GetComponent<BoxCollider>().enabled = false;
+            if (GetComponent<Renderer>())
+                GetComponent<Renderer>().enabled = false;
+            if (GetComponent<BoxCollider>())
+                GetComponent<BoxCollider>().enabled = false;
+            if (GetComponent<MeshRenderer>() != null)
+                GetComponent<MeshRenderer>().enabled = false;
         }
     }
 }
