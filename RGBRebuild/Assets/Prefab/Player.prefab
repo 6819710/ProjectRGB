@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6650669590797972881}
   - component: {fileID: 6650669590797972880}
   - component: {fileID: 6650669590797972887}
+  - component: {fileID: 493452194}
   - component: {fileID: 5627626052258398328}
   m_Layer: 9
   m_Name: Player
@@ -46,8 +47,8 @@ CharacterController:
   m_Enabled: 1
   serializedVersion: 2
   m_Height: 2
-  m_Radius: 0.5
-  m_SlopeLimit: 45
+  m_Radius: 0.3
+  m_SlopeLimit: 60
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
@@ -64,10 +65,41 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b19a0d2e1b27c1a40b7fe330164c132e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inputDirection: 0
+  vertialVelocity: 0
+  controller: {fileID: 0}
   _gravity: 45
-  _speed: 4
-  _jumpPower: 14
+  _speed: 5
+  _jumpPower: 18
   _moveWhileJump: 1
+--- !u!114 &493452194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6650669590797972882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e030c85b5a05ba4bb7ee4091920cb53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _whiteGlow: {fileID: 2100000, guid: 0ef47b5b3400a0f4ca58ddeb430f9350, type: 2}
+  _greenGlow: {fileID: 2100000, guid: dcd1927a021c2004795b63f234da299c, type: 2}
+  _redGlow: {fileID: 2100000, guid: afa7fd0513a7cb94b8d30666d74b911c, type: 2}
+  _blueGlow: {fileID: 2100000, guid: eea77ab1db40d914facb10b9c4801017, type: 2}
+  _whiteHair: {fileID: 2100000, guid: c5e5c963cb93f9f48bf1689b45a23464, type: 2}
+  _greenHair: {fileID: 2100000, guid: a2df4b3c7ef0e5545a8b223ff5b3357d, type: 2}
+  _redHair: {fileID: 2100000, guid: c9d68b535601f6342a893e8b7f6113cc, type: 2}
+  _blueHair: {fileID: 2100000, guid: 39e685f582d702a4ca9f2625f780911c, type: 2}
+  bodyRenderer: {fileID: 8294272076764477679}
+  gogglesRenderer: {fileID: 6750771214984700556}
+  _hasGreen: 0
+  _hasRed: 0
+  _hasBlue: 0
+  _isGreen: 0
+  _isRed: 0
+  _isBlue: 0
 --- !u!95 &5627626052258398328
 Animator:
   serializedVersion: 3
@@ -224,6 +256,18 @@ PrefabInstance:
 --- !u!4 &2344220592441346371 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 90f25c15de93060458d6e91cd6400794,
+    type: 3}
+  m_PrefabInstance: {fileID: 7346194508834857561}
+  m_PrefabAsset: {fileID: 0}
+--- !u!137 &8294272076764477679 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 1651062367082650294, guid: 90f25c15de93060458d6e91cd6400794,
+    type: 3}
+  m_PrefabInstance: {fileID: 7346194508834857561}
+  m_PrefabAsset: {fileID: 0}
+--- !u!137 &6750771214984700556 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -5161861447346650923, guid: 90f25c15de93060458d6e91cd6400794,
     type: 3}
   m_PrefabInstance: {fileID: 7346194508834857561}
   m_PrefabAsset: {fileID: 0}
