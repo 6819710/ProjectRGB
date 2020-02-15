@@ -5,11 +5,13 @@ TagManager:
   serializedVersion: 2
   tags:
   - GreenOn
-  - GreenOff
   - RedOn
-  - RedOff
-  - BlueOn
-  - BlueOff
+  - ClimbTrigger
+  - BreakawayTrigger
+  - Breakaway
+  - GreenGoggles
+  - RedGoggles
+  - BlueGoggles
   layers:
   - Default
   - TransparentFX

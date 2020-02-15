@@ -105,4 +105,28 @@ public class PlayerMovement : MonoBehaviour
             movementAnim.SetTrigger("Idle");
         }
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        switch (other.tag)
+        {
+            case "ClimbTrigger":
+                Debug.Log("ClimbTrigger");
+                if(vertialVelocity > 0.0f)
+                {
+                    vertialVelocity = _jumpPower;
+                    moveVector = new Vector3(inputDirection, vertialVelocity, 0);
+                }
+                break;
+            case "BreakawayTrigger":
+                Debug.Log("BreakawayTrigger");
+                GameObject[] breakaway = GameObject.FindGameObjectsWithTag("Breakaway");
+                foreach(GameObject o in breakaway)
+                {
+                    o.GetComponent<BoxCollider>().enabled = false;
+                    o.GetComponent<MeshRenderer>().enabled = false;
+                }
+                break;
+        }
+    }
 }
