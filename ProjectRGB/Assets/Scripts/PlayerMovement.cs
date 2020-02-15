@@ -89,7 +89,7 @@ public class PlayerMovement : MonoBehaviour
             bodyAnim.ResetTrigger("Idle");
             bodyAnim.SetTrigger("Walk");
         }
-        else
+        else if(inputDirection == 0.0f)
         {
             bodyAnim.ResetTrigger("Walk");
             bodyAnim.SetTrigger("Idle");
