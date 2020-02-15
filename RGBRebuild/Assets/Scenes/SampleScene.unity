@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 66868487}
   - component: {fileID: 66868486}
   - component: {fileID: 66868490}
+  - component: {fileID: 66868491}
   m_Layer: 9
   m_Name: RedBlock
   m_TagString: RedOn
@@ -277,6 +278,26 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 50, y: 25, z: 25}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &66868491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 66868485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 195305f555da04747a84db51b80a79d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _onWhite: 0
+  _onGreen: 1
+  _onRed: 0
+  _onBlue: 0
+  _offWhite: 1
+  _offGreen: 0
+  _offRed: 1
+  _offBlue: 1
 --- !u!1 &154298107
 GameObject:
   m_ObjectHideFlags: 0
@@ -758,6 +779,7 @@ GameObject:
   - component: {fileID: 379822008}
   - component: {fileID: 379822007}
   - component: {fileID: 379822006}
+  - component: {fileID: 379822011}
   m_Layer: 9
   m_Name: RedBlock (5)
   m_TagString: RedOn
@@ -901,6 +923,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &379822011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 379822005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 195305f555da04747a84db51b80a79d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _onWhite: 0
+  _onGreen: 0
+  _onRed: 0
+  _onBlue: 1
+  _offWhite: 1
+  _offGreen: 1
+  _offRed: 1
+  _offBlue: 0
 --- !u!1 &724447690
 GameObject:
   m_ObjectHideFlags: 0
@@ -914,6 +956,7 @@ GameObject:
   - component: {fileID: 724447693}
   - component: {fileID: 724447692}
   - component: {fileID: 724447691}
+  - component: {fileID: 724447696}
   m_Layer: 9
   m_Name: RedBlock (4)
   m_TagString: RedOn
@@ -1057,6 +1100,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &724447696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 724447690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 195305f555da04747a84db51b80a79d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _onWhite: 0
+  _onGreen: 0
+  _onRed: 0
+  _onBlue: 1
+  _offWhite: 1
+  _offGreen: 1
+  _offRed: 1
+  _offBlue: 0
 --- !u!1 &812310524
 GameObject:
   m_ObjectHideFlags: 0
@@ -1070,6 +1133,7 @@ GameObject:
   - component: {fileID: 812310525}
   - component: {fileID: 812310528}
   - component: {fileID: 812310529}
+  - component: {fileID: 812310531}
   m_Layer: 9
   m_Name: GreenBlock
   m_TagString: GreenOn
@@ -1213,6 +1277,26 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 50, y: 25, z: 25}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &812310531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 812310524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 195305f555da04747a84db51b80a79d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _onWhite: 0
+  _onGreen: 1
+  _onRed: 0
+  _onBlue: 0
+  _offWhite: 1
+  _offGreen: 0
+  _offRed: 1
+  _offBlue: 1
 --- !u!1 &876870703
 GameObject:
   m_ObjectHideFlags: 0
@@ -1942,6 +2026,7 @@ GameObject:
   - component: {fileID: 1596408062}
   - component: {fileID: 1596408061}
   - component: {fileID: 1596408060}
+  - component: {fileID: 1596408065}
   m_Layer: 9
   m_Name: RedBlock (2)
   m_TagString: RedOn
@@ -2085,6 +2170,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1596408065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1596408059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 195305f555da04747a84db51b80a79d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _onWhite: 0
+  _onGreen: 0
+  _onRed: 1
+  _onBlue: 0
+  _offWhite: 1
+  _offGreen: 1
+  _offRed: 0
+  _offBlue: 1
 --- !u!1 &1605179144
 GameObject:
   m_ObjectHideFlags: 0
@@ -2098,6 +2203,7 @@ GameObject:
   - component: {fileID: 1605179147}
   - component: {fileID: 1605179146}
   - component: {fileID: 1605179145}
+  - component: {fileID: 1605179150}
   m_Layer: 9
   m_Name: RedBlock (3)
   m_TagString: RedOn
@@ -2241,6 +2347,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1605179150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1605179144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 195305f555da04747a84db51b80a79d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _onWhite: 0
+  _onGreen: 1
+  _onRed: 0
+  _onBlue: 0
+  _offWhite: 1
+  _offGreen: 0
+  _offRed: 1
+  _offBlue: 1
 --- !u!1 &1668965243
 GameObject:
   m_ObjectHideFlags: 0
@@ -2254,6 +2380,7 @@ GameObject:
   - component: {fileID: 1668965246}
   - component: {fileID: 1668965245}
   - component: {fileID: 1668965244}
+  - component: {fileID: 1668965249}
   m_Layer: 9
   m_Name: RedBlock (8)
   m_TagString: RedOn
@@ -2397,6 +2524,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1668965249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1668965243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 195305f555da04747a84db51b80a79d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _onWhite: 0
+  _onGreen: 0
+  _onRed: 1
+  _onBlue: 0
+  _offWhite: 1
+  _offGreen: 1
+  _offRed: 0
+  _offBlue: 1
 --- !u!1 &1818473658
 GameObject:
   m_ObjectHideFlags: 0
@@ -2878,6 +3025,7 @@ GameObject:
   - component: {fileID: 1897849141}
   - component: {fileID: 1897849140}
   - component: {fileID: 1897849139}
+  - component: {fileID: 1897849144}
   m_Layer: 9
   m_Name: RedBlock (6)
   m_TagString: RedOn
@@ -3021,6 +3169,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1897849144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1897849138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 195305f555da04747a84db51b80a79d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _onWhite: 0
+  _onGreen: 0
+  _onRed: 0
+  _onBlue: 1
+  _offWhite: 1
+  _offGreen: 1
+  _offRed: 1
+  _offBlue: 0
 --- !u!1 &1960448792
 GameObject:
   m_ObjectHideFlags: 0
@@ -3034,6 +3202,7 @@ GameObject:
   - component: {fileID: 1960448795}
   - component: {fileID: 1960448794}
   - component: {fileID: 1960448793}
+  - component: {fileID: 1960448798}
   m_Layer: 9
   m_Name: RedBlock (1)
   m_TagString: RedOn
@@ -3177,6 +3346,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1960448798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1960448792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 195305f555da04747a84db51b80a79d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _onWhite: 0
+  _onGreen: 0
+  _onRed: 1
+  _onBlue: 0
+  _offWhite: 1
+  _offGreen: 1
+  _offRed: 0
+  _offBlue: 1
 --- !u!1 &2081839117
 GameObject:
   m_ObjectHideFlags: 0
@@ -3190,6 +3379,7 @@ GameObject:
   - component: {fileID: 2081839120}
   - component: {fileID: 2081839119}
   - component: {fileID: 2081839118}
+  - component: {fileID: 2081839123}
   m_Layer: 9
   m_Name: GreenBlock (1)
   m_TagString: GreenOn
@@ -3333,6 +3523,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2081839123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2081839117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 195305f555da04747a84db51b80a79d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _onWhite: 0
+  _onGreen: 1
+  _onRed: 0
+  _onBlue: 0
+  _offWhite: 1
+  _offGreen: 0
+  _offRed: 1
+  _offBlue: 1
 --- !u!1 &2126337760
 GameObject:
   m_ObjectHideFlags: 0
@@ -3496,6 +3706,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 493452194, guid: b834b90b78067af4fb7d54730ab86b48, type: 3}
+      propertyPath: _hasGreen
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 493452194, guid: b834b90b78067af4fb7d54730ab86b48, type: 3}
+      propertyPath: _hasRed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 493452194, guid: b834b90b78067af4fb7d54730ab86b48, type: 3}
+      propertyPath: _hasBlue
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6650669590797972881, guid: b834b90b78067af4fb7d54730ab86b48,
         type: 3}
       propertyPath: m_LocalPosition.x

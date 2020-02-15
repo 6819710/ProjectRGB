@@ -86,8 +86,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _whiteGlow: {fileID: 2100000, guid: 0ef47b5b3400a0f4ca58ddeb430f9350, type: 2}
   _greenGlow: {fileID: 2100000, guid: dcd1927a021c2004795b63f234da299c, type: 2}
-  _redGlow: {fileID: 2100000, guid: afa7fd0513a7cb94b8d30666d74b911c, type: 2}
-  _blueGlow: {fileID: 2100000, guid: eea77ab1db40d914facb10b9c4801017, type: 2}
+  _redGlow: {fileID: 2100000, guid: eea77ab1db40d914facb10b9c4801017, type: 2}
+  _blueGlow: {fileID: 2100000, guid: afa7fd0513a7cb94b8d30666d74b911c, type: 2}
   _whiteHair: {fileID: 2100000, guid: c5e5c963cb93f9f48bf1689b45a23464, type: 2}
   _greenHair: {fileID: 2100000, guid: a2df4b3c7ef0e5545a8b223ff5b3357d, type: 2}
   _redHair: {fileID: 2100000, guid: c9d68b535601f6342a893e8b7f6113cc, type: 2}
