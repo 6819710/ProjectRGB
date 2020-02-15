@@ -97,6 +97,7 @@ public class GogglesController : MonoBehaviour
 
     void setWhite()
     {
+        // TODO: Equip Unequip Animation
         Material[] bodyMaterials = bodyRenderer.materials;
         bodyMaterials[1] = _whiteGlow;
         bodyMaterials[3] = _whiteHair;
@@ -106,6 +107,7 @@ public class GogglesController : MonoBehaviour
 
     void setGreen()
     {
+        // TODO: Equip Green Animation
         Material[] bodyMaterials = bodyRenderer.materials;
         Material[] goggleMaterials = gogglesRenderer.materials;
         bodyMaterials[1] = _greenGlow;
@@ -118,6 +120,7 @@ public class GogglesController : MonoBehaviour
 
     void setRed()
     {
+        // TODO: Equip Red Animation
         Material[] bodyMaterials = bodyRenderer.materials;
         Material[] goggleMaterials = gogglesRenderer.materials;
         bodyMaterials[1] = _redGlow;
@@ -130,6 +133,7 @@ public class GogglesController : MonoBehaviour
 
     void setBlue()
     {
+        // TODO: Equip Blue Animation
         Material[] bodyMaterials = bodyRenderer.materials;
         Material[] goggleMaterials = gogglesRenderer.materials;
         bodyMaterials[1] = _blueGlow;
@@ -138,5 +142,39 @@ public class GogglesController : MonoBehaviour
         bodyRenderer.materials = bodyMaterials;
         gogglesRenderer.materials = goggleMaterials;
         gogglesRenderer.enabled = true;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        switch (other.tag)
+        {
+            case "GreenGoggles":
+                GameObject.FindGameObjectWithTag("GreenGoggles").GetComponent<MeshRenderer>().enabled = false;
+                GameObject.FindGameObjectWithTag("GreenGoggles").GetComponent<SphereCollider>().enabled = false;
+                _hasGreen = true;
+                _isGreen = true;
+                _isRed = false;
+                _isBlue = false;
+                setGreen();
+                break;
+            case "RedGoggles":
+                GameObject.FindGameObjectWithTag("GreenGoggles").GetComponent<MeshRenderer>().enabled = false;
+                GameObject.FindGameObjectWithTag("GreenGoggles").GetComponent<SphereCollider>().enabled = false;
+                _hasRed = true;
+                _isGreen = false;
+                _isRed = true;
+                _isBlue = false;
+                setRed();
+                break;
+            case "BlueGoggles":
+                GameObject.FindGameObjectWithTag("GreenGoggles").GetComponent<MeshRenderer>().enabled = false;
+                GameObject.FindGameObjectWithTag("GreenGoggles").GetComponent<SphereCollider>().enabled = false;
+                _hasBlue = true;
+                _isGreen = false;
+                _isRed = false;
+                _isBlue = true;
+                setBlue();
+                break;
+        }
     }
 }

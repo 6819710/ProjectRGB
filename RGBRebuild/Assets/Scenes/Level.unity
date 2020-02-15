@@ -7072,7 +7072,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 493452194, guid: b834b90b78067af4fb7d54730ab86b48, type: 3}
       propertyPath: _hasGreen
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2931779178525396960, guid: b834b90b78067af4fb7d54730ab86b48,
         type: 3}
@@ -8899,7 +8899,7 @@ GameObject:
   - component: {fileID: 1995087328}
   m_Layer: 0
   m_Name: GreenGoggles
-  m_TagString: Untagged
+  m_TagString: GreenGoggles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
