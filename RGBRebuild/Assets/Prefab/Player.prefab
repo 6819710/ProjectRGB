@@ -68,6 +68,9 @@ MonoBehaviour:
   _speed: 5
   _jumpPower: 18
   _moveWhileJump: 1
+  _moveWhileAnimTransition: 0
+  _moveWhileGoggleAnim: 0
+  _idleJump: 0
 --- !u!95 &5627626052258398328
 Animator:
   serializedVersion: 3

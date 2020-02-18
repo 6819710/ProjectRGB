@@ -40,7 +40,11 @@ public class PlayerController : MonoBehaviour
     public float _gravity;
     public float _speed;
     public float _jumpPower;
+    
+    [Header("Movement Flags")]
     public bool _moveWhileJump;
+    public bool _moveWhileAnimTransition;
+    public bool _moveWhileGoggleAnim;
     public bool _idleJump;
 
     // Movement Variables
@@ -56,10 +60,10 @@ public class PlayerController : MonoBehaviour
     private AnimState rotState;
 
     // Button Locking
-    public bool jumpPressed;
-    public bool greenPressed;
-    public bool redPressed;
-    public bool bluePressed;
+    private bool jumpPressed;
+    private bool greenPressed;
+    private bool redPressed;
+    private bool bluePressed;
 
     // Goggle Variables
     private GoggleState goggleState;
@@ -88,12 +92,16 @@ public class PlayerController : MonoBehaviour
             previousX = transform.position.x;
 
         // Read Inputs
-        if (goggleChange && controller.isGrounded)
+        if (goggleChange && controller.isGrounded && _moveWhileGoggleAnim)
             inputDirection = 0.0f;
-        else if(!goggleChange && _moveWhileJump)
+        else if(_moveWhileJump)
             inputDirection = Input.GetAxis("Horizontal") * _speed;
 
         UpdateMovementAnim();
+
+        // Reset Speed for Anim Transition
+        if ((_moveWhileAnimTransition || movementAnim.GetBool("IsMoving")) && (controller.isGrounded || (!controller.isGrounded && _idleJump)))
+            inputDirection = 0.0f;
 
         // Process Jump
         if (controller.isGrounded)
