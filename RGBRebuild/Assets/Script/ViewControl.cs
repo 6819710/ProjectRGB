@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ViewControl : MonoBehaviour
 {
-    private GameObject _player;
+    public GameObject _player;
 
     public bool _onWhite;
     public bool _onGreen;
@@ -19,7 +19,7 @@ public class ViewControl : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _player = GameObject.Find("Player");
+       // _player = GameObject.Find("Player");
     }
 
     // Update is called once per frame
