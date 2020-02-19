@@ -92,15 +92,17 @@ public class PlayerController : MonoBehaviour
             previousX = transform.position.x;
 
         // Read Inputs
-        if (goggleChange && controller.isGrounded && _moveWhileGoggleAnim)
-            inputDirection = 0.0f;
-        else if(_moveWhileJump)
+        // If player is grounded or player can move while jumping, update horizontal direction
+        if (controller.isGrounded || _moveWhileJump)
             inputDirection = Input.GetAxis("Horizontal") * _speed;
 
+        // Update Animation Flags
         UpdateMovementAnim();
 
-        // Reset Speed for Anim Transition
-        if ((_moveWhileAnimTransition || movementAnim.GetBool("IsMoving")) && (controller.isGrounded || (!controller.isGrounded && _idleJump)))
+        // Reset Speed if Required
+        // If able to move in any animation state AND the animation state is not "IsWalking" set horizontal direction to 0
+        // And is either grounded or not grounded when not idol jump.
+        if ((!_moveWhileAnimTransition && !movementAnim.GetBool("IsWalking")) && (controller.isGrounded || (!controller.isGrounded && !_idleJump)))
             inputDirection = 0.0f;
 
         // Process Jump
