@@ -5911,6 +5911,12 @@ PrefabInstance:
       propertyPath: m_ReceiveShadows
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -5851063534019991803, guid: e6a9dea6049a31d44ab579553f4f8493,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: -3155047780354543793, guid: f7fb606c5a48ae246a566a6277237b57,
+        type: 3}
     - target: {fileID: -4216859302048453862, guid: e6a9dea6049a31d44ab579553f4f8493,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5976,6 +5982,12 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5221774311310797679, guid: e6a9dea6049a31d44ab579553f4f8493,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: -3155047780354543793, guid: f7fb606c5a48ae246a566a6277237b57,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6a9dea6049a31d44ab579553f4f8493, type: 3}
 --- !u!4 &1185755602 stripped
